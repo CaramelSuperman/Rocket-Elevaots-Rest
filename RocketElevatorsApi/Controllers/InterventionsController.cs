@@ -44,12 +44,12 @@ namespace RocketElevatorsApi.Controllers
 
         // POST: api/elevators/Status/1?status=offline
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("Changestatus1/{id}")]
+        [HttpPut("ChangeStatusToInProgress/{id}")]
         public async Task<ActionResult<Intervention>> ChangeInterventionStatusToInProgress(long id)
         {
 
             var intervention = await _context.interventions.FindAsync(id);
-            if (intervention.status == "Pending")
+            
                        
             intervention.status = "InProgress";
             intervention.start_intervention = DateTime.Now;
@@ -60,12 +60,12 @@ namespace RocketElevatorsApi.Controllers
         }
 
          // GET: api/elevators/offline
-         [HttpPut("Changestatus2/{id}")]
+         [HttpPut("ChangeStatusToCompleted/{id}")]
         public async Task<ActionResult<Intervention>> ChangeInterventionStatusToCompleted(long id)
         {
 
             var intervention = await _context.interventions.FindAsync(id);
-            if (intervention.status == "InProgess")
+            
                        
             intervention.status = "Completed";
             intervention.end_intervention = DateTime.Now;

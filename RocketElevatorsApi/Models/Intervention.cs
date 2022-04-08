@@ -2,7 +2,7 @@ public class Intervention{
     public long Id { get; set; }
     public string? author { get; set; }
     public string? customerID {get; set;}
-    public string? buildingD  {get; set;}
+    public string? buildingID  {get; set;}
     public string? batteryID {get; set;}
     public string? columnID {get; set;}
      public string? elevatorID {get; set;}
