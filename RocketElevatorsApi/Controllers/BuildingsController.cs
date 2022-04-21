@@ -59,6 +59,24 @@ namespace RocketElevatorsApi.Controllers
 
             return buildingsWithInterventions;
         }
+         [HttpGet("List/{id}")]
+        public async Task<ActionResult<IEnumerable<Building>>> ListBuildings(long id)
+        {
+            long ID = id;
+            await _context.buildings.ToListAsync();
+            List<Building> buildings = await _context.buildings.ToListAsync();
+            List<Building> buildingsList = new List<Building>();
+            
+           
+            foreach (Building d in buildings ){
+                if(d.customer_id == ID){
+                    buildingsList.Add(d);}
+           }
+
+           
+            
+            return buildingsList;
+        }
         private bool BuildingExists(long id)
         {
             return _context.buildings.Any(e => e.Id == id);

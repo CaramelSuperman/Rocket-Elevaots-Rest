@@ -51,6 +51,24 @@ namespace RocketElevatorsApi.Controllers
             await _context.SaveChangesAsync();
             return elevator;
         }
+        [HttpGet("List/{id}")]
+        public async Task<ActionResult<IEnumerable<Elevator>>> ListBuildings(long id)
+        {
+            long ID = id;
+            await _context.elevators.ToListAsync();
+            List<Elevator> elevators = await _context.elevators.ToListAsync();
+            List<Elevator> elevatorList = new List<Elevator>();
+            
+           
+            foreach (Elevator d in elevators ){
+                if(d.column_id == ID){
+                    elevatorList.Add(d);}
+           }
+
+           
+            
+            return elevatorList;
+        }
 
          // GET: api/elevators/offline
         [HttpGet("offline")]

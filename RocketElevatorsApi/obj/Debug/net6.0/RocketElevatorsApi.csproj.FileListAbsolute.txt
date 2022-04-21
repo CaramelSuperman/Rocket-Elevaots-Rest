@@ -540,3 +540,8 @@ C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\obj\
 C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\obj\Debug\net6.0\RocketElevatorsApi.csproj.CopyComplete
 C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\obj\Debug\net6.0\RocketElevatorsApi.genruntimeconfig.cache
 C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\obj\Debug\net6.0\ref\RocketElevatorsApi.dll
+C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\bin\Debug\net6.0\publish\publish\web.config
+C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\bin\Debug\net6.0\publish\publish\appsettings.Development.json
+C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\bin\Debug\net6.0\publish\publish\appsettings.json
+C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\bin\Debug\net6.0\publish\publish\RocketElevatorsApi.deps.json
+C:\Users\Asus\OneDrive\Desktop\Rocket-Elevators-Rest-API\RocketElevatorsApi\bin\Debug\net6.0\publish\publish\RocketElevatorsApi.runtimeconfig.json

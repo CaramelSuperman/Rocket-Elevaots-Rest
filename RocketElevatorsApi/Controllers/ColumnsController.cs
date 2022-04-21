@@ -42,6 +42,24 @@ namespace RocketElevatorsApi.Controllers
 
             return column;
         }
+        [HttpGet("List/{id}")]
+        public async Task<ActionResult<IEnumerable<Column>>> ListColumns(long id)
+        {
+            long ID = id;
+            await _context.columns.ToListAsync();
+            List<Column> columns = await _context.columns.ToListAsync();
+            List<Column> columnsList = new List<Column>();
+            
+           
+            foreach (Column d in columns ){
+                if(d.battery_id == ID){
+                    columnsList.Add(d);}
+           }
+
+           
+            
+            return columnsList;
+        }
 
         // PUT: api/Columns/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

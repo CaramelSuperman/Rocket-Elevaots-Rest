@@ -36,6 +36,26 @@ namespace RocketElevatorsApi.Controllers
             return battery.status;
         }
 
+        [HttpGet("List/{id}")]
+        public async Task<ActionResult<IEnumerable<Battery>>> ListBatteries(long id)
+        {
+            long ID = id;
+            await _context.buildings.ToListAsync();
+            List<Battery> batteries = await _context.batteries.ToListAsync();
+            List<Battery> batteriesList = new List<Battery>();
+            
+           
+            foreach (Battery d in batteries ){
+                if(d.building_id == ID){
+                    batteriesList.Add(d);}
+           }
+
+           
+            
+            return batteriesList;
+        }
+
+
         // POST: api/batteries/Status/1?status=offline
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("status/{id}")]
