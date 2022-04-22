@@ -1,14 +1,31 @@
-namespace RocketElevatorsApi.Models
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+
+namespace DotNetCoreMySQL.Modelsv
 {
-    public class Column
+    public partial class Column
     {
+        public Column()
+        {
+            Elevators = new HashSet<Elevator>();
+        }
+
         public long Id { get; set; }
-        public string? set_type { get; set; }
-        public long? nb_of_floors_served { get; set; }
-        public string? status { get; set; }
-        public string? information { get; set; }
-        public string? notes { get; set; }
-        public long? battery_id {get; set;}
-        
+        public string? SetType { get; set; }
+        public int? NbOfFloorsServed { get; set; }
+        public string? Status { get; set; }
+        public string? Information { get; set; }
+        public string? Notes { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public long? BatteryId { get; set; }
+
+        [ForeignKey("BatteryId")]
+
+        public virtual Battery? Battery { get; set; }
+        public virtual ICollection<Elevator> Elevators { get; set; }
     }
 }

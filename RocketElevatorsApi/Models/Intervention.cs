@@ -1,17 +1,27 @@
-public class Intervention{
-    public long Id { get; set; }
-    public string? author { get; set; }
-    public string? customerID {get; set;}
-    public string? buildingID  {get; set;}
-    public string? batteryID {get; set;}
-    public string? columnID {get; set;}
-     public string? elevatorID {get; set;}
-    public DateTime? start_intervention{get; set;}
-    public DateTime? end_intervention {get; set;}
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
-    public string? result {get; set;}
-    public string? report {get; set;}
-    public string? status {get; set;}
-    public string? employee {get; set;}
-
+namespace DotNetCoreMySQL.Models
+{
+    public partial class Intervention
+    {
+        public long Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public string? Author { get; set; }
+        public string? CustomerId { get; set; }
+        public string? BuildingId { get; set; }
+        public string? BatteryId { get; set; }
+        public string? ColumnId { get; set; }
+        public string? ElevatorId { get; set; }
+        public DateTime? StartIntervention { get; set; }
+        public DateTime? EndIntervention { get; set; }
+        public string? Result { get; set; }
+        public string? Report { get; set; }
+        public string? Status { get; set; }
+        public string? Employee { get; set; }
+    }
 }

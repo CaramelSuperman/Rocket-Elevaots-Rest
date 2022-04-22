@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using RocketElevatorsApi.Models;
-using RocketElevatorsApi.Data;
+using DotNetCoreMySQL.Models;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 
@@ -9,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<DarlyAlmonteContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
